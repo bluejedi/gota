@@ -2,8 +2,8 @@
 TradingView scanner api client
 
 ## Thx to :
-https://github.com/elliottcarlson/go-tvscanner/tree/use_screener
-https://github.com/Canibus/go-tvscanner
+- https://github.com/elliottcarlson/go-tvscanner/tree/use_screener
+- https://github.com/Canibus/go-tvscanner
 
 
 ## Usage
