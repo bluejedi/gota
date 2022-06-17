@@ -1,4 +1,4 @@
-module github.com/bluejedi/go-tvscanner
+module github.com/bluejedi/gota
 
 go 1.15
 

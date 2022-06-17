@@ -67,6 +67,7 @@ type RecommendSummary struct {
 	SellCount    int
 	NeutralCount int
 	Ocsillators DataResponse
+	Pivot 		DataResponse
 }
 
 type Recommend struct {
@@ -238,6 +239,9 @@ func (c *Scanner) GetAnalysis(screener, exchange, symbol, interval string) (Reco
 		ContextLogger.Errorf("Exchange (%s) or symbol (%s) not found %v", exchange, symbol, err)
 		return RecommendSummary{}, err
 	}
+
+	fmt.Println(r) //test june
+
 	err = json.Unmarshal(r, &c.data)
 	if err != nil {
 		ContextLogger.Error(err)
@@ -369,5 +373,6 @@ func (c *Scanner) GetAnalysis(screener, exchange, symbol, interval string) (Reco
 		SellCount:    oscillatorsCounter["SELL"] + maCounter["SELL"],
 		NeutralCount: oscillatorsCounter["NEUTRAL"] + maCounter["NEUTRAL"],
 		Ocsillators:  c.data,
+		Pivot:		  c.data,
 	}, nil
 }

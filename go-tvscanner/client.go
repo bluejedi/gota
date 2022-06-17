@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bluejedi/go-tvscanner/version"
+	"github.com/bluejedi/gota/go-tvscanner/version"
 )
 
 type client struct {
